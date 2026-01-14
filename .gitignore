@@ -51,3 +51,7 @@ pvac_metrics.csv
 .DS_Store
 *.dSYM/
 
+
+# Python
+venv/
+__pycache__/
