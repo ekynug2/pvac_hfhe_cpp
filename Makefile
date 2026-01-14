@@ -68,6 +68,9 @@ $(BUILD)/test_ct_safe: $(TESTS)/test_ct_safe.cpp | $(BUILD)
 $(BUILD)/test_aes_ctr: $(TESTS)/test_aes_ctr.cpp | $(BUILD)
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
+$(BUILD)/test_struct: $(TESTS)/test_struct.cpp | $(BUILD)
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
 debug: $(BUILD)/test_main_debug
 sanitize: $(BUILD)/test_main_san
 examples: $(BUILD)/basic_usage
@@ -81,6 +84,7 @@ test_noise_struct: $(BUILD)/test_noise_struct
 test_ct_fuzz: $(BUILD)/test_ct_fuzz
 test_ct_safe: $(BUILD)/test_ct_safe
 test_aes_ctr: $(BUILD)/test_aes_ctr
+test_struct: $(BUILD)/test_struct
 
 
 test: $(BUILD)/test_main
@@ -136,6 +140,9 @@ test-ct-safe: $(BUILD)/test_ct_safe
 
 test-aes-ctr: $(BUILD)/test_aes_ctr
 	@./$(BUILD)/test_aes_ctr
+
+test-struct: $(BUILD)/test_struct
+	@./$(BUILD)/test_struct
 
 clean:
 	rm -rf $(BUILD) pvac_metrics.csv

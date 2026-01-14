@@ -21,9 +21,9 @@ namespace fs = std::filesystem;
 
 // format signatures
 namespace Magic {
-    constexpr uint32_t CT  = 0x66699666; // 666-99-666 ciphertext
-    constexpr uint32_t SK  = 0x66666999; // 6666-999 secret key
-    constexpr uint32_t PK  = 0x06660666; // 0666-0666 public key
+    constexpr uint32_t CT = 0x66699666; // 666-99-666 ciphertext
+    constexpr uint32_t SK = 0x66666999; // 6666-999 secret key
+    constexpr uint32_t PK = 0x06660666; // 0666-0666 public key
     constexpr uint32_t VER = 1; // format ver
 }
 
